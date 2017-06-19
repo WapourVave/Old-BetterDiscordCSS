@@ -19,6 +19,19 @@
     animation: rainbowtext 5s linear infinite;  
 }
 
+
+/* Discord Master Font */
+/** {
+    font-family: comic sans ms;
+}
+*/
+
+/* Discord Accent Colours */
+:root {
+    --accent-color: #FF007E!important; /* This is the colour for menu options, @mentions and other related UI elements */
+    --notification-color: #FF007E!important; /* Changes the notification colour */
+}
+
 /* Settings UI Tab Text */
 [layer-id="user-settings"] .ui-tab-bar-item {
     color:#FF0080!important;
@@ -29,6 +42,35 @@
     display: none!important;
 }
  
+ /* Friends List Anti Cut Off */
+.private-channels .channel .channel-name {
+    overflow:visible ;
+}
+
+ /* Remove Beard Theme version number */
+span[data-reactid$="$scroller.$tcolumn.$theme-list.$Beard_s_Material_theme_for_Discord.0.0.1"],
+span[data-reactid$="$scroller.$tcolumn.$theme-list.$Beard_s_Material_theme_for_Discord.0.0.2"] {
+    display: none!important;
+}
+
+/* Smarter Embeds */
+//META{"name":"SmarterEmbeds","description":"It basically makes the embeds align horizontally, so when there's multitple links in the same message, it takes less space in the chat.","author":"Beard_Design","version":"1.0.0"}*//{}
+
+.message-group .accessory{
+    display: flex;
+    flex-flow: row wrap;
+}
+.message-group .accessory>*:not(:last-of-type){
+    margin-right:10px;
+}
+.message-group .accessory>*{
+    margin-top:5px;
+}
+.reactions{
+    width:100%;
+    flex:100%;
+    order:9999999999;
+}
 
  /* Role Colours */
   /*Coming soon*/
@@ -49,11 +91,7 @@
     background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_the_NSDAP_%281920%E2%80%931945%29.svg/1000px-Flag_of_the_NSDAP_%281920%E2%80%931945%29.svg.png)!important;
 }
 
-/* Discord Accent Colours */
-:root {
-    --accent-color: #FF007E!important;
-    --notification-color: #FF007E!important;
-}
+
 
 /* Glyphs Reborn */
 /*body .theme-dark .ui-video {
@@ -113,8 +151,8 @@ body .guilds .guild-placeholder {
 }
 
 /* Discord Username */
-.account .account-details .username,
-body .account .account-details .discriminator {
+.container-iksrDt .accountDetails-15i-_e .username,
+body .container-iksrDt .accountDetails-15i-_e .discriminator {
     color:#FF0080!important;
     animation: rainbowtext 5s linear infinite;
     overflow: visible!important;
@@ -184,314 +222,7 @@ body .account .account-details .discriminator {
     position: relative!important;
 }
 
-/*------------------------
-  User Popout Badges
-  ------------------------*/
-
-/* Base */
-.user-popout .avatar-popout>.status {
-    pointer-events:none;
-}
-.user-popout .avatar-popout>.status:after {
-    bottom: 70px;
-    margin-left: 64px;
-    background-color: #212121;
-    color:rgba(255,255,255,.3);
-    font-size:30px;
-    z-index:1;
-    position:relative;
-    cursor:pointer;
-    transition:100ms ease;
-    pointer-events:initial!important;
-}
-.user-popout .avatar-popout>.status:hover::after {
-    color:#fff;
-}
-.user-popout .avatar-popout>.status:hover::before {
-    background-color: #303030!important;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2)!important;
-    padding: 6px 10px;
-    border-radius: 3px;
-    font-size: 13px;
-    z-index: 3000000;
-    display: block;
-    position:absolute;
-    right:0;
-    color:#fff;
-    text-align: center;
-}
-
-/* Eden */
-.user-popout .avatar-popout[style*="142795541833580544"]>.status:after {content: "🌀";}
-.user-popout .avatar-popout[style*="142795541833580544"]>.status:hover::before {
-    content: "That Eden Kid";
-    width: 50px;
-    bottom: 16px;
-    left: 31px;
-}
-
-/* Pointy */
-.user-popout .avatar-popout[style*="99914384989519872"]>.status:after {content: "🖕";}
-.user-popout .avatar-popout[style*="99914384989519872"]>.status:hover::before {
-    content: "Pointiest Point";
-    width: 50px;
-    bottom: 18px;
-    left: 31px;
-}
-
-/* Lauren */
-.user-popout .avatar-popout[style*="205529980715663360"]>.status:after {content: "😍";}
-.user-popout .avatar-popout[style*="205529980715663360"]>.status:hover::before {
-    content: "S̶e̶c̶r̶e̶t̶ ̶L̶o̶v̶e̶r̶ Lauren";
-    width: 40px;
-    bottom: 8px;
-    left: 40px;
-}
-
-/* Jagrosh */
-.user-popout .avatar-popout[style*="113156185389092864"]>.status:after {content: "📟"; left: -10px;}
-.user-popout .avatar-popout[style*="113156185389092864"]>.status:hover::before {
-    content: "Jagrosh";
-    width: 40px;
-    bottom: 33px;
-    left: 40px;
-}
-.user-popout .avatar-popout[style*="194257036828082176"]>.status:after {content: "📟"; left: -10px;}
-.user-popout .avatar-popout[style*="194257036828082176"]>.status:hover::before {
-    content: "Jagrosh";
-    width: 40px;
-    bottom: 33px;
-    left: 40px;
-}
-/* -- JagBots -- */
-
-/* Spectra */
-.user-popout .avatar-popout[style*="135251434445733888"]>.status:after {content: "⚡";}
-.user-popout .avatar-popout[style*="135251434445733888"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-.user-popout .avatar-popout[style*="162311503821799425"]>.status:after {content: "⚡";}
-.user-popout .avatar-popout[style*="162311503821799425"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-/* Vortex */
-.user-popout .avatar-popout[style*="240254129333731328"]>.status:after {content: "🌀";}
-.user-popout .avatar-popout[style*="240254129333731328"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-/* Clarity */
-.user-popout .avatar-popout[style*="174202555981758464"]>.status:after {content: "🎶";}
-.user-popout .avatar-popout[style*="174202555981758464"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-.user-popout .avatar-popout[style*="290602874596229122"]>.status:after {content: "🎶";}
-.user-popout .avatar-popout[style*="290602874596229122"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-/* Yggdrasil */
-.user-popout .avatar-popout[style*="247283454440374274"]>.status:after {content: "🌱";}
-.user-popout .avatar-popout[style*="247283454440374274"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-/* Floppy */
-.user-popout .avatar-popout[style*="159133099806949376"]>.status:after {content: "💾";}
-.user-popout .avatar-popout[style*="159133099806949376"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-/* GiveawayBot */
-.user-popout .avatar-popout[style*="294882584201003009"]>.status:after {content: "🎉";}
-.user-popout .avatar-popout[style*="294882584201003009"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-/* Frost */
-.user-popout .avatar-popout[style*="197531150900658176"]>.status:after {content: "❄️";}
-.user-popout .avatar-popout[style*="197531150900658176"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-/* TestBot */
-.user-popout .avatar-popout[style*="227323729116397568"]>.status:after {content: "🔧";}
-.user-popout .avatar-popout[style*="227323729116397568"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-/* Phoenix */
-.user-popout .avatar-popout[style*="196667982993162240"]>.status:after {content: "🔥";}
-.user-popout .avatar-popout[style*="196667982993162240"]>.status:hover::before {
-    content: "JagBot";
-    width: 40px;
-    bottom: 33px;
-    left: 42px;
-}
-
-/* JagBot */
-.user-popout .avatar-popout[style*="210805198002585600"]>.status:after {content: "📟";}
-.user-popout .avatar-popout[style*="210805198002585600"]>.status:hover::before {
-    content: "The Real JagBot";
-    width: 40px;
-    bottom: 11px;
-    left: 42px;
-}
-
-/* -- Super -- */
-
-/* NotSoSuper */
-.user-popout .avatar-popout[style*="130070621034905600"]>.status:after {content: "😎";}
-.user-popout .avatar-popout[style*="130070621034905600"]>.status:hover::before {
-    content: "Not So Super Duper";
-    width: 50px;
-    bottom: 20px;
-    left: 31px;
-}
-
-/* Beard */
-.user-popout .avatar-popout[style*="184021060562321419"]>.status:after {content: "âš™";}
-.user-popout .avatar-popout[style*="184021060562321419"]>.status:hover::before {
-    content: "Beard's Material Theme Developer";
-    width: 53px;
-    bottom: -5px;
-    left: 29px;
-}
-
-/* Ollie */
-.user-popout .avatar-popout[style*="289188485590548480"]>.status:after {content: "💨";}
-.user-popout .avatar-popout[style*="289188485590548480"]>.status:hover::before {
-  content: "Vapestir";
-  width: 44px;
-  bottom: 33px;
-  left: 38px; 
-}
-
-.user-popout .avatar-popout[style*="161644086938304521"]>.status:after {content: "💨";}
-.user-popout .avatar-popout[style*="161644086938304521"]>.status:hover::before {
-  content: "Vapestir";
-  width: 44px;
-  bottom: 33px;
-  left: 38px;
-}
-
-.user-popout .avatar-popout[style*="243889575292829696"]>.status:after {content: "💨";}
-.user-popout .avatar-popout[style*="243889575292829696"]>.status:hover::before {
-  content: "Vapestir";
-  width: 44px;
-  bottom: 33px;
-  left: 38px; 
-}
-
-/* Spoon */
-.user-popout .avatar-popout[style*="293058845289349121"]>.status:after {content: "🍴";}
-.user-popout .avatar-popout[style*="293058845289349121"]>.status:hover::before {
-  content: "Kitchen Utensil";
-  width: 44px;
-  bottom: 33px;
-  left: 38px; 
-}
-
-/* H3RO */
-.user-popout .avatar-popout[style*="183756588220284928"]>.status:after {content: "🐕";}
-.user-popout .avatar-popout[style*="183756588220284928"]>.status:hover::before {
-  content: "Digital Doggo";
-  width: 44px;
-  bottom: 33px;
-  left: 38px; 
-}
-
-/* Katy */
-.user-popout .avatar-popout[style*="264731257928155136"]>.status:after {content: "👶";}
-.user-popout .avatar-popout[style*="264731257928155136"]>.status:hover::before {
-  content: "12 Year Old";
-  width: 44px;
-  bottom: 18px;
-  left: 38px;
-}
-
-/* Natalie */
-.user-popout .avatar-popout[style*="146739643143028737"]>.status:after {content: "👖";}
-.user-popout .avatar-popout[style*="146739643143028737"]>.status:hover::before {
-  content: "Happy Pill Buddy";
-  width: 44px;
-  bottom: 6px;
-  left: 38px;
-}
-
-/* Satan */
-.user-popout .avatar-popout[style*="290133465410830347"]>.status:after {content: "😈";}
-.user-popout .avatar-popout[style*="290133465410830347"]>.status:hover::before {
-    content: "Devil Worshiper";
-    width: 53px;
-    bottom: 20px;
-    left: 29px;
-}
-
-/* -- Discord Devs -- */
-
-/* Dabbit Prime */
-.user-popout .avatar-popout[style*="110813477156720640"]>.status:after {content: "🛠️";}
-.user-popout .avatar-popout[style*="110813477156720640"]>.status:hover::before {
-    content: "Discord Dev";
-    width: 53px;
-    bottom: -5px;
-    left: 29px;
-}
-
-/* -- HypeSquad Members */
-/* Kaden */
-.user-popout .avatar-popout[style*="212642964026032130"]>.status:after {content: url("https://b1nzy.ratelimited.me/u/f6a842.png");}
-.user-popout .avatar-popout[style*="212642964026032130"]>.status:hover::before {
-    content: "Verified by Wapour Vave #1388";
-    width: 53px;
-    bottom: -20px;
-    left: 29px;
-}
-
-/* -- Verified -- */
-/* Stuff */
-.user-popout .avatar-popout[style*="No"]>.status:after {content:"Tick Emoji Here");}
-.user-popout .avatar-popout[style*="U"]>.status:hover::before {
-    content: "Verified";
-    width: 53px;
-    bottom: -20px;
-    left: 29px;
-}
-
+/*---------------------------------------------------------------------------------------------------------*/
 
 /*------------------------
   Name Tags
@@ -504,8 +235,6 @@ body .account .account-details .discriminator {
 .avatar-large[style*="277631928365088769"]+.comment .username-wrapper .user-name:after,
 .avatar-small[style*="281944046908473345"]+.member-inner .member-username .member-username-inner:after,
 .avatar-large[style*="281944046908473345"]+.comment .username-wrapper .user-name:after,
-.avatar-small[style*="285921877942206464"]+.member-inner .member-username .member-username-inner:after,
-.avatar-large[style*="285921877942206464"]+.comment .username-wrapper .user-name:after,
 .avatar-small[style*="292395886162477058"]+.member-inner .member-username .member-username-inner:after,
 .avatar-large[style*="292395886162477058"]+.comment .username-wrapper .user-name:after,
 .avatar-small[style*="303244067524050944"]+.member-inner .member-username .member-username-inner:after,
@@ -538,6 +267,24 @@ body .account .account-details .discriminator {
     font-size: 10px;
     font-weight: 600;
     color: #000!important;
+    margin-left: 6px;
+    padding: 1px 2px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    vertical-align: bottom;
+    line-height: 16px;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+/* Fake Bots */
+.avatar-small[style*="285921877942206464"]+.member-inner .member-username .member-username-inner:after,
+.avatar-large[style*="285921877942206464"]+.comment .username-wrapper .user-name:after {
+    content: "Bot";
+    background: #7289DA;
+    font-size: 10px;
+    font-weight: 600;
+    color: #ffffff!important;
     margin-left: 6px;
     padding: 1px 2px;
     border-radius: 3px;
@@ -1297,30 +1044,314 @@ body .account .account-details .discriminator {
     flex-shrink: 0;
 }
 
+/*---------------------------------------------------------------------------------------------------------*/
 
-/* Remove Beard Theme version number */
-span[data-reactid$="$scroller.$tcolumn.$theme-list.$Beard_s_Material_theme_for_Discord.0.0.1"],
-span[data-reactid$="$scroller.$tcolumn.$theme-list.$Beard_s_Material_theme_for_Discord.0.0.2"] {
-    display: none!important;
+/*------------------------
+  User Popout Badges
+  ------------------------*/
+
+/* Base */
+.user-popout .avatar-popout>.status {
+    pointer-events:none;
+}
+.user-popout .avatar-popout>.status:after {
+    bottom: 70px;
+    margin-left: 64px;
+    background-color: #212121;
+    color:rgba(255,255,255,.3);
+    font-size:30px;
+    z-index:1;
+    position:relative;
+    cursor:pointer;
+    transition:100ms ease;
+    pointer-events:initial!important;
+}
+.user-popout .avatar-popout>.status:hover::after {
+    color:#fff;
+}
+.user-popout .avatar-popout>.status:hover::before {
+    background-color: #303030!important;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2)!important;
+    padding: 6px 10px;
+    border-radius: 3px;
+    font-size: 13px;
+    z-index: 3000000;
+    display: block;
+    position:absolute;
+    right:0;
+    color:#fff;
+    text-align: center;
 }
 
-/* Smarter Embeds */
-//META{"name":"SmarterEmbeds","description":"It basically makes the embeds align horizontally, so when there's multitple links in the same message, it takes less space in the chat.","author":"Beard_Design","version":"1.0.0"}*//{}
+/* Eden */
+.user-popout .avatar-popout[style*="142795541833580544"]>.status:after {content: "🌀";}
+.user-popout .avatar-popout[style*="142795541833580544"]>.status:hover::before {
+    content: "That Eden Kid";
+    width: 50px;
+    bottom: 16px;
+    left: 31px;
+}
 
-.message-group .accessory{
-	display: flex;
-	flex-flow: row wrap;
+/* Pointy */
+.user-popout .avatar-popout[style*="99914384989519872"]>.status:after {content: "🖕";}
+.user-popout .avatar-popout[style*="99914384989519872"]>.status:hover::before {
+    content: "Pointiest Point";
+    width: 50px;
+    bottom: 18px;
+    left: 31px;
 }
-.message-group .accessory>*:not(:last-of-type){
-	margin-right:10px;
+
+/* Lauren */
+.user-popout .avatar-popout[style*="205529980715663360"]>.status:after {content: "😍";}
+.user-popout .avatar-popout[style*="205529980715663360"]>.status:hover::before {
+    content: "S̶e̶c̶r̶e̶t̶ ̶L̶o̶v̶e̶r̶ Lauren";
+    width: 40px;
+    bottom: 8px;
+    left: 40px;
 }
-.message-group .accessory>*{
-	margin-top:5px;
+
+/* Jagrosh */
+.user-popout .avatar-popout[style*="113156185389092864"]>.status:after {content: "📟"; left: -10px;}
+.user-popout .avatar-popout[style*="113156185389092864"]>.status:hover::before {
+    content: "Jagrosh";
+    width: 40px;
+    bottom: 33px;
+    left: 40px;
 }
-.reactions{
-	width:100%;
-	flex:100%;
-	order:9999999999;
+.user-popout .avatar-popout[style*="194257036828082176"]>.status:after {content: "📟"; left: -10px;}
+.user-popout .avatar-popout[style*="194257036828082176"]>.status:hover::before {
+    content: "Jagrosh";
+    width: 40px;
+    bottom: 33px;
+    left: 40px;
+}
+/* -- JagBots -- */
+
+/* Spectra */
+.user-popout .avatar-popout[style*="135251434445733888"]>.status:after {content: "⚡";}
+.user-popout .avatar-popout[style*="135251434445733888"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+.user-popout .avatar-popout[style*="162311503821799425"]>.status:after {content: "⚡";}
+.user-popout .avatar-popout[style*="162311503821799425"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+/* Vortex */
+.user-popout .avatar-popout[style*="240254129333731328"]>.status:after {content: "🌀";}
+.user-popout .avatar-popout[style*="240254129333731328"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+/* Clarity */
+.user-popout .avatar-popout[style*="174202555981758464"]>.status:after {content: "🎶";}
+.user-popout .avatar-popout[style*="174202555981758464"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+.user-popout .avatar-popout[style*="290602874596229122"]>.status:after {content: "🎶";}
+.user-popout .avatar-popout[style*="290602874596229122"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+/* Yggdrasil */
+.user-popout .avatar-popout[style*="247283454440374274"]>.status:after {content: "🌱";}
+.user-popout .avatar-popout[style*="247283454440374274"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+/* Floppy */
+.user-popout .avatar-popout[style*="159133099806949376"]>.status:after {content: "💾";}
+.user-popout .avatar-popout[style*="159133099806949376"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+/* GiveawayBot */
+.user-popout .avatar-popout[style*="294882584201003009"]>.status:after {content: "🎉";}
+.user-popout .avatar-popout[style*="294882584201003009"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+/* Frost */
+.user-popout .avatar-popout[style*="197531150900658176"]>.status:after {content: "❄️";}
+.user-popout .avatar-popout[style*="197531150900658176"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+/* TestBot */
+.user-popout .avatar-popout[style*="227323729116397568"]>.status:after {content: "🔧";}
+.user-popout .avatar-popout[style*="227323729116397568"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+/* Phoenix */
+.user-popout .avatar-popout[style*="196667982993162240"]>.status:after {content: "🔥";}
+.user-popout .avatar-popout[style*="196667982993162240"]>.status:hover::before {
+    content: "JagBot";
+    width: 40px;
+    bottom: 33px;
+    left: 42px;
+}
+
+/* JagBot */
+.user-popout .avatar-popout[style*="210805198002585600"]>.status:after {content: "📟";}
+.user-popout .avatar-popout[style*="210805198002585600"]>.status:hover::before {
+    content: "The Real JagBot";
+    width: 40px;
+    bottom: 11px;
+    left: 42px;
+}
+
+/* -- Super -- */
+
+/* NotSoSuper */
+.user-popout .avatar-popout[style*="130070621034905600"]>.status:after {content: "😎";}
+.user-popout .avatar-popout[style*="130070621034905600"]>.status:hover::before {
+    content: "Not So Super Duper";
+    width: 50px;
+    bottom: 20px;
+    left: 31px;
+}
+
+/* Beard */
+.user-popout .avatar-popout[style*="184021060562321419"]>.status:after {content: "âš™";}
+.user-popout .avatar-popout[style*="184021060562321419"]>.status:hover::before {
+    content: "Beard's Material Theme Developer";
+    width: 53px;
+    bottom: -5px;
+    left: 29px;
+}
+
+/* Ollie */
+.user-popout .avatar-popout[style*="289188485590548480"]>.status:after {content: "💨";}
+.user-popout .avatar-popout[style*="289188485590548480"]>.status:hover::before {
+  content: "Vapestir";
+  width: 44px;
+  bottom: 33px;
+  left: 38px; 
+}
+
+.user-popout .avatar-popout[style*="161644086938304521"]>.status:after {content: "💨";}
+.user-popout .avatar-popout[style*="161644086938304521"]>.status:hover::before {
+  content: "Vapestir";
+  width: 44px;
+  bottom: 33px;
+  left: 38px;
+}
+
+.user-popout .avatar-popout[style*="243889575292829696"]>.status:after {content: "💨";}
+.user-popout .avatar-popout[style*="243889575292829696"]>.status:hover::before {
+  content: "Vapestir";
+  width: 44px;
+  bottom: 33px;
+  left: 38px; 
+}
+
+/* Spoon */
+.user-popout .avatar-popout[style*="293058845289349121"]>.status:after {content: "🍴";}
+.user-popout .avatar-popout[style*="293058845289349121"]>.status:hover::before {
+  content: "Kitchen Utensil";
+  width: 44px;
+  bottom: 33px;
+  left: 38px; 
+}
+
+/* H3RO */
+.user-popout .avatar-popout[style*="183756588220284928"]>.status:after {content: "🐕";}
+.user-popout .avatar-popout[style*="183756588220284928"]>.status:hover::before {
+  content: "Digital Doggo";
+  width: 44px;
+  bottom: 33px;
+  left: 38px; 
+}
+
+/* Katy */
+.user-popout .avatar-popout[style*="264731257928155136"]>.status:after {content: "👶";}
+.user-popout .avatar-popout[style*="264731257928155136"]>.status:hover::before {
+  content: "12 Year Old";
+  width: 44px;
+  bottom: 18px;
+  left: 38px;
+}
+
+/* Natalie */
+.user-popout .avatar-popout[style*="146739643143028737"]>.status:after {content: "👖";}
+.user-popout .avatar-popout[style*="146739643143028737"]>.status:hover::before {
+  content: "Happy Pill Buddy";
+  width: 44px;
+  bottom: 6px;
+  left: 38px;
+}
+
+/* Satan */
+.user-popout .avatar-popout[style*="290133465410830347"]>.status:after {content: "😈";}
+.user-popout .avatar-popout[style*="290133465410830347"]>.status:hover::before {
+    content: "Devil Worshiper";
+    width: 53px;
+    bottom: 20px;
+    left: 29px;
+}
+
+/* -- Discord Devs -- */
+
+/* Dabbit Prime */
+.user-popout .avatar-popout[style*="110813477156720640"]>.status:after {content: "🛠️";}
+.user-popout .avatar-popout[style*="110813477156720640"]>.status:hover::before {
+    content: "Discord Dev";
+    width: 53px;
+    bottom: -5px;
+    left: 29px;
+}
+
+/* -- HypeSquad Members */
+/* Kaden */
+.user-popout .avatar-popout[style*="212642964026032130"]>.status:after {content: url("https://b1nzy.ratelimited.me/u/f6a842.png");}
+.user-popout .avatar-popout[style*="212642964026032130"]>.status:hover::before {
+    content: "Verified by Wapour Vave #1388";
+    width: 53px;
+    bottom: -20px;
+    left: 29px;
+}
+
+/* -- Verified -- */
+/* Stuff */
+.user-popout .avatar-popout[style*="No"]>.status:after {content:"Tick Emoji Here");}
+.user-popout .avatar-popout[style*="U"]>.status:hover::before {
+    content: "Verified";
+    width: 53px;
+    bottom: -20px;
+    left: 29px;
 }
 
 /* Bot Tag Removal */
