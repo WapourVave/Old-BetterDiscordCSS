@@ -1,0 +1,236 @@
+/*------------------------
+  ------------------------
+  BetterDiscord Custom CSS
+  ------------------------
+  ------------------------*/
+
+/*------------------------
+  Settings
+  ------------------------*/
+
+/* Rainbow  */
+@keyframes rainbow {
+    10% { background-color: #9400D3; }
+    20% { background-color: #4B0082; }
+    30% { background-color: #0000FF; }
+    40% { background-color: #00FF00; }
+    50% { background-color: #FFFF00; }
+    60% { background-color: #FF7F00; }
+    70% { background-color: #FF0000; }
+    80% { background-color: #1AFFA8; }
+    90% { background-color: #0027FF; }
+    100% { background-color: #FF0080; }
+}
+
+/* Rainbow Text */
+@keyframes rainbowtext {
+    10% { color: #ff4300; }
+    20% { color: #ffc700; }
+    30% { color: #2eff00; }
+    40% { color: #00ffff; }
+    50% { color: #002eff; }
+    60% { color: #b200ff; }
+    70% { color: #ff0000; }
+    80% { color: #d0ff00; }
+    90% { color: #00fffa; }
+    100% { color: #FF0080; }
+}
+
+/* I own BetterDiscord I swear */
+[layer-id="user-settings"] [href="https://github.com/Jiiks/"] {
+    font-size: 0px;
+}
+[layer-id="user-settings"] [href="https://github.com/Jiiks/"]:after {
+    font-size: 12px!important;
+    content: "Wapour Vave";
+    color:#FF0080!important;
+    animation: rainbowtext 5s linear infinite;  
+}
+
+/* Global Bot Tag Profile */
+.bot-tag.bot-tag-invert {
+    background: #7289DA;
+    color: #FFFFFF!important;
+}
+
+/* Quoter */
+body .message-group .btn-quote {
+    height: 22px;
+    width: 18px;
+    margin-right: 7px;
+}
+
+/* Discord Master Font */
+/** {
+    font-family: comic sans ms;
+}
+*/
+
+/* Discord Accent Colours */
+:root {
+    --accent-color: #FF007E!important; /* This is the colour for menu options, @mentions and other related UI elements */
+    --notification-color: #FF007E!important; /* Changes the notification colour */
+}
+
+/* Settings UI Tab Text */
+[layer-id="user-settings"] .ui-tab-bar-item {
+    color:#FF0080!important;
+    animation: rainbowtext 5s linear infinite;
+}
+
+.premium-promo, .premium-promo-autocomplete {
+    display: none!important;
+}
+ 
+ /* Friends List Anti Cut Off */
+.private-channels .channel .channel-name {
+    overflow:visible ;
+}
+
+ /* Remove Beard Theme version number */
+span[data-reactid$="$scroller.$tcolumn.$theme-list.$Beard_s_Material_theme_for_Discord.0.0.1"],
+span[data-reactid$="$scroller.$tcolumn.$theme-list.$Beard_s_Material_theme_for_Discord.0.0.2"] {
+    display: none!important;
+}
+
+/* Smarter Embeds */
+//META{"name":"SmarterEmbeds","description":"It basically makes the embeds align horizontally, so when there's multitple links in the same message, it takes less space in the chat.","author":"Beard_Design","version":"1.0.0"}*//{}
+
+.message-group .accessory{
+    display: flex;
+    flex-flow: row wrap;
+}
+.message-group .accessory>*:not(:last-of-type){
+    margin-right:10px;
+}
+.message-group .accessory>*{
+    margin-top:5px;
+}
+.reactions{
+    width:100%;
+    flex:100%;
+    order:9999999999;
+}
+
+ /* Role Colours */
+  /*Coming soon*/
+
+ /* Discord Background Colours */
+ /*
+* {
+    background: #FF0080!important;
+    -webkit-animation: rainbow 10s linear infinite;
+    animation: rainbow s linear infinite;
+}*/
+
+ /* Notification Colours (Accents) */
+
+/* Discord Background Images */
+/*
+* { 
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Flag_of_the_NSDAP_%281920%E2%80%931945%29.svg/1000px-Flag_of_the_NSDAP_%281920%E2%80%931945%29.svg.png)!important;
+}
+
+
+
+/* Glyphs Reborn */
+/*body .theme-dark .ui-video {
+    background: none!important;
+}
+*/
+
+/* Discord Guilds Wrapper */
+body .guilds-wrapper {
+    background:!important;
+}
+
+/* Jiik's clock plugin */
+#clockPluginClock {
+    padding-top: 8px!important;
+    padding-bottom: 5px!important;
+    background: #0A0A0A!important;
+    margin-left: -6px;
+    z-index: 1001!important;
+}
+
+/* Mention Bug Fix Beards */
+.mention{
+    display: inline-block;
+}
+
+/* Compensate for clock plugin */
+.friends-icon {
+    margin-top: 19px!important;
+}
+
+/* Top new mention indicator */
+.new-messages-indicator.new-messages-indicator-guild.new-messages-indicator-mention {
+    margin-top: 29px;
+}
+
+/* Wider guild bar */
+.guilds-wrapper {
+    width: 73px!important;
+}
+
+/* Move all guilds to compensate for above */
+.guilds-wrapper .scroller-wrap {
+    margin-left: 3px!important;
+}
+
+/* Fix moving guilds */
+body .guilds .guild-placeholder {
+    margin-left: 0px!important;
+    width: 73px!important;
+}
+
+/* Move status/server management to compensate */
+.status-picker.popout-menu,
+.popout-menu {
+    margin-left: 3px;
+}
+
+/* Discord Username */
+.container-iksrDt .accountDetails-15i-_e .username,
+body .container-iksrDt .accountDetails-15i-_e .discriminator {
+    color:#FF0080!important;
+    animation: rainbowtext 5s linear infinite;
+    overflow: visible!important;
+}
+
+
+/* Chat box */
+.channel-textarea-emoji {
+    max-height: none!important;
+    right: -2px!important;
+    top: -7px!important;
+}
+
+#charcounter {
+    margin-right: -4px!important;
+}
+
+.channel-textarea-inner textarea {
+    padding-right: 75px!important;
+}
+
+/*.account .account-details {
+    background: rgba(255,255,255,0.3)
+}*/
+
+/* Bottom new mention indicator */
+.guilds-wrapper .new-messages-indicator.bottom {
+    bottom: 0!important;
+}
+
+/* Remove blankspace due to relative guilds add */
+.guilds-wrapper .guilds {
+    margin-bottom: 0!important;
+}
+
+/* Relative guilds add */
+.guilds .guilds-add {
+    left: 5px!important;
+    position: relative!important;
+}
+
