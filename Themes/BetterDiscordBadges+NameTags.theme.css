@@ -1,4 +1,4 @@
-//META{"name":"BetterDiscord Badges + NameTags","description":"Adds Badges and Name Tags to users on Discord! Contact Wapour Vave#1388 on Discord to have new users added!","author":"Wapour Vave","version":"0.1.1"}*//{}
+//META{"name":"BetterDiscord Badges + NameTags","description":"Adds Badges and Name Tags to users on Discord! Contact Wapour Vave#1388 on Discord to have new users added! (Reload Discord to update the theme!)","author":"Wapour Vave","version":"1337"}*//{}
 
 /*-----------------------------------
   -----------------------------------
@@ -6,5 +6,10 @@
   -----------------------------------
   -----------------------------------*/
 
+/*------------------------
+  Imports
+  ------------------------*/
+
+/* Theme Imports */
 @import url(https://rawgit.com/WapourVave/BetterDiscordCSS/master/Src/DiscordBadges.css);
 @import url(https://rawgit.com/WapourVave/BetterDiscordCSS/master/Src/DiscordNameTags.css);
