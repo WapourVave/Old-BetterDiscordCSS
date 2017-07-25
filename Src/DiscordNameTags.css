@@ -8,7 +8,24 @@
   Settings
   ------------------------*/
 
+/* Global Bot Tag */
+.bot-tag {
+    color: #000!important;
+    background: #708fff;
+}
 
+.channel-members .bot-tag {
+    height: 14px!important;
+    line-height: 15px!important;
+    margin-left: 4px;
+    margin-top: 1.24px;
+}
+
+/* Global Bot Tag Profile */
+.bot-tag.bot-tag-invert {
+    background: #708fff;
+    color: #FFFFFF!important;
+}
 
 /* Rainbow  */
 @keyframes rainbow {
