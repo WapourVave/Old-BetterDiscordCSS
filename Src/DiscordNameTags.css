@@ -12,6 +12,7 @@
 .bot-tag {
     color: #000!important;
     background: #708fff;
+    cursor: pointer;
 }
 
 .channel-members .bot-tag {
@@ -25,6 +26,14 @@
 .bot-tag.bot-tag-invert {
     background: #708fff;
     color: #000!important;
+}
+
+/* Global Name Underlining */
+.chat .user-name:hover {
+    text-decoration: none;
+    cursor: pointer;
+    webkit-user-select: none;
+
 }
 
 /* Rainbow  */
